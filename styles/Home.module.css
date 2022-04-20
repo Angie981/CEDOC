@@ -115,3 +115,166 @@
     flex-direction: column;
   }
 }
+
+/*Navbar*/
+.navElements,
+.navbar {
+  /*position: absolute;*/
+  /*height: 100%;*/
+  height: 12vmin;
+  background-color: rgba(0, 0, 0, .7);
+  transition: background-color .3s;
+}
+
+.navElementsSize {
+  width: 81%;
+  height: 100%
+}
+
+.containerImg {
+  position: relative;
+  height: 12vmin;
+  width: fit-content;
+  display: flex;
+}
+
+.containerImg img {
+  height: 100%;
+  width: auto;
+  padding: 1.9vmin
+}
+
+#logo-unmsm-center,
+#logo-biblioteca {
+  position: relative
+}
+
+
+
+#logo-biblioteca {
+  margin-left: 10vmin;
+}
+
+.contTitleHeader {
+  /*width: fit-content;*/
+  position: relative;
+}
+
+.contTitleHeader:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -2.5px;
+  height: 100%;
+  width: 5px;
+  border-radius: 50px;
+  background: #c8a22b;
+}
+
+.contTitleHeader {
+  /*border-left: 3px solid #fff;*/
+  /*border-left: 3px solid #c8a22b;*/
+  text-shadow: 3px 0px 3px #000;
+}
+
+.contTitleHeader>p {
+  font-size: 1.8vmin;
+}
+
+.contTitleHeader>h1 {
+  font-size: 2.7vmin;
+  font-family: Gill Sans MT;
+}
+
+.headerGrid {
+  position: relative;
+  height: 100%;
+  width: auto;
+  display: grid;
+  grid-template-columns: 0fr auto 0fr
+}
+
+/*Boostrap*/
+.containerFluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.dFlex {
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.mrAuto,
+.mxAuto {
+  margin-right: auto !important;
+}
+
+.h100 {
+  height: 100% !important;
+}
+
+.mr0,
+.mx-0 {
+  margin-right: 0 !important;
+}
+
+.floatLeft {
+  float: left !important;
+}
+
+.pr4,
+.px4 {
+  padding-right: 1.5rem !important;
+}
+
+.alignItemsCenter {
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
+
+.justifyContentBetween {
+  -ms-flex-pack: justify !important;
+  justify-content: space-between !important;
+}
+
+.textDecorationNone {
+  text-decoration: none !important;
+}
+
+.border0 {
+  border: 0 !important;
+}
+
+.pl4,
+.px4 {
+  padding-left: 1.5rem !important;
+}
+
+.pysm3 {
+  padding-top: 1rem !important;
+}
+
+.pbsm3,
+.pysm3 {
+  padding-bottom: 1rem !important;
+}
+
+.positionRelative {
+  position: relative !important;
+}
+
+
+@media only screen and (max-width:1200px) {
+  .navElementsSize {
+    width: 100%
+  }
+}
+
+#container-img-center {
+  width: auto;
+  display: flex;
+}
