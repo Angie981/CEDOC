@@ -2,6 +2,11 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Navbar from '../components/Navbar.js'
 import Footer from '../components/Footer.js'
+import Banner from '../components/Banner.js'
+import {library} from '@fortawesome/fontawesome-svg-core';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {fas} from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 
 
 export default function Home() {
@@ -16,6 +21,16 @@ export default function Home() {
       <Navbar>
         
       </Navbar>
+
+      <Banner>
+
+      </Banner>
+      <div className={styles.center}>
+        <input type="search" id="site-search"/> 
+        <button><FontAwesomeIcon icon="fa-solid fa-magnifying-glass" width={15}/></button>
+      </div>
+
+      
 
       <Footer className={styles.footer} >
         
