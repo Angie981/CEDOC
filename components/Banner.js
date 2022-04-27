@@ -3,8 +3,9 @@ import {library} from '@fortawesome/fontawesome-svg-core';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {fas} from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-
+import {toggle} from '../public/js/toggle.js';
 library.add(fas,fab);
+
 
 const Banner=()=>{
     return (
@@ -12,7 +13,7 @@ const Banner=()=>{
         <nav className={styles.nav}>
            
             <div className={styles.banner}>
-                 <div className={styles.center}>   
+                 <div className={styles.titleCenter}>   
                     <div className={styles.titleHeader}>
                         CDMS 
                     </div>
@@ -21,49 +22,34 @@ const Banner=()=>{
                         sobre Movimientos Sociales 
                     </div>  
                 </div>
-                <ul className={styles.menu + styles.list}>
-                    <li className={styles.item}>Inicio</li>
+                <ul className={styles.menu}>
+                    <li className={styles.item}><a href="#">Inicio</a></li>
+                    <li className={styles.item}><a href="#">Nosotros</a></li>
+                    <li className={styles.item}><a href="#">Servicios</a>
                         <ul>
-                            <li className={styles.item}>Definición</li>
-                            <li className={styles.item}>Catálogo</li>
+                            <li className={styles.item2}><a href="#">Préstamo</a></li>
+                            <li className={styles.item2}><a href="#">Digitalización de documentos</a></li>
+                            <li className={styles.item2}><a href="#">Estante abierto</a></li>
+                            <li className={styles.item2}><a href="#">Acceso Wifi</a></li>
                         </ul>
-                    <li className={styles.item}>Nosotros</li>
+                    </li>
+                    <li className={styles.item}><a href="#">Catálogo</a></li>
+                    <li className={styles.item}><a href="#">Recursos en línea</a>
                         <ul>
-                            <li className={styles.item}>Autoridades de la Universidad</li>
-                            <li className={styles.item}>DGBP</li>
-                            <li className={styles.item}>DSBBC</li>
-                            <li className={styles.item}>USI</li>
-                            <li className={styles.item}>Comité Consultivo</li>
+                            <li className={styles.item2}><a href="#">Biblioteca digital de CEDOC</a></li>
+                            <li className={styles.item2}><a href="#"> Actas del Consejo de Ministros</a></li>
+                            <li className={styles.item2}><a href="#">Repositorios institucionale</a></li>                          
                         </ul>
-                    <li className={styles.item}>Servicios</li>
-                        <ul>
-                            <li className={styles.item}>Préstamo en Sala</li>
-                            <li className={styles.item}>Préstamo a Domicilio</li>
-                            <li className={styles.item}>Préstamo Interbiblioecario</li>
-                            <li className={styles.item}>Acceso a Internet</li>
-                            <li className={styles.item}> Digitalización de Documentos</li>
-                            <li className={styles.item}>Estante abierto</li>
-                        </ul>
-
-                    <li className={styles.item}>Recursos en línea</li>
-                        <ul>
-                            <li className={styles.item}> Base de datos</li>
-                            <li className={styles.item}> Enlaces a Bibliotecas afines</li>
-                            <li className={styles.item}>Enlaces a Biblioteca de la UNMSM</li>
-                            <li className={styles.item}>Archivo COVID-19</li>
-                            <li className={styles.item}> Actas del Consejo de Ministros del Perú</li>
-                            <li className={styles.item}>Fondo Editorial UNMSM</li>
-                            <li className={styles.item}>Cybertesis UNMSM</li>
-                            <li className={styles.item}>Revistas de Investigaciòn UNMSM</li>
-                            <li className={styles.item}>Novedades Bibliográficas</li>
-                            <li className={styles.item}>Biblioteca Digital de CEDOC</li>
-                        </ul>
-                        <li className={styles.toggle}><a href="#"> <FontAwesomeIcon icon="fa-solid fa-bars" width={15}/> </a></li>
+                    </li>
+                    <li className={styles.item}><a href="#">Agenda cultural</a></li>
+                    <li className={styles.item}><a href="#">Galería</a></li>
+                    <li className={styles.item}><a href="#">Apoyo a la investigación</a></li>
+                    <li className={styles.toggle}><a href="#"> <FontAwesomeIcon icon="fa-solid fa-bars" width={20} /> </a></li>
                 </ul>
             
             </div>
             <div className={styles.start}>
-                <button className={styles.buttonStart} >Empecemos</button>
+                <button className={styles.buttonStart} >EMPECEMOS</button>
             </div>
 
 

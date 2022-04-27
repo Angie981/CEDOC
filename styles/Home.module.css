@@ -13,63 +13,46 @@
 }
 
 .footer {
+
+  position: relative;
+  left: 0px;
+  bottom: 0px;
   display: block;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   width: 100%;
-  height: 250px;
-  border-radius: 500px 500px 0 0;
-  background: rgb(221, 199, 101);
-  -moz-border-radius: 500px 500px 0 0;
-  -webkit-border-radius: 500px 500px 0 0;
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 4.5rem;
+
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.secondaryFooter {
+  height: 25px;
+  background: #fff;
+  color: #000;
 }
+
+
+.secondaryFooter p {
+  margin: 0;
+}
+
+.mainFooter {
+  padding-top: 2rem;
+  width: 100%;
+  height: 200px;
+  color: #fff;
+  border-radius: 400px 400px 0 0;
+  background: #00745E;
+  -moz-border-radius: 400px 400px 0 0;
+  -webkit-border-radius: 400px 400px 0 0;
+}
+
 
 .title a {
   color: #0070f3;
   text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 .grid {
@@ -87,7 +70,7 @@
   color: inherit;
   text-decoration: none;
   border: 1px solid #eaeaea;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
 }
@@ -120,6 +103,19 @@
     width: 100%;
     flex-direction: column;
   }
+
+  .gridIndex {
+    grid-template-columns: repeat(1, 400px) !important;
+    /* 3 columns */
+    grid-template-rows: repeat(6, 500px) !important;
+
+  }
+
+
+  .searchPlaceholder {
+    width: 300px !important;
+  }
+
 }
 
 /*Navbar*/
@@ -140,15 +136,62 @@
 .containerImg {
   position: relative;
   height: 12vmin;
-  width: fit-content;
+  width: 100vw;
   display: flex;
 }
 
-.containerImg img {
+.socialNetworks {
+
+  width: -webkit-fill-available;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+
+}
+
+
+.alignSocialNetworks {
+  padding: 1.9vmin;
+  margin-right: 1.9vmin;
+  width: 100%;
+  text-align: right;
+}
+
+.iconNetworks,
+.iconNetworksEnvelope {
+  margin-left: 7px;
+  margin-bottom: -5px;
+  height: 1.4rem;
+}
+
+
+.correo {
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.imageLogo {
+  padding-right: 1.5rem !important;
   height: 100%;
   width: auto;
   padding: 1.9vmin
 }
+
+.menu ul {
+  list-style-type: none !important;
+}
+
+.menu li {
+  font-size: 16px;
+  padding: 15px 5px;
+  white-space: nowrap;
+}
+
+
+.toggle a {
+  font-size: 20px;
+}
+
 
 #logo-unmsm-center,
 #logo-biblioteca {
@@ -197,7 +240,7 @@
   height: 100%;
   width: auto;
   display: grid;
-  grid-template-columns: 0fr auto 0fr
+  grid-template-columns: max-content;
 }
 
 /*Boostrap*/
@@ -289,7 +332,7 @@
 /*Banner*/
 
 .nav {
-  background-image: url(https://thumbs.dreamstime.com/b/reserva-el-modelo-incons%C3%BAtil-de-la-biblioteca-fondo-de-la-lectura-55842017.jpg);
+  background-image: url(https://www.xmple.com/wallpaper/linear-green-blue-gradient-1920x1080-c2-6495ed-3cb371-a-45-f-14.svg);
   padding: 5px 20px;
   height: 400px;
 }
@@ -297,13 +340,24 @@
 
 /* Mobile menu */
 .menu {
-  display: flex;
+  float: right;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 
+.menu li {
+  background: #000;
+  opacity: 75%;
+  color: #fff;
+}
+
 .toggle {
+  width: 3.7rem;
+  height: 3.2rem;
+  border-radius: 20px;
+  background: #000;
+  color: #fff;
   order: 1;
 }
 
@@ -311,14 +365,16 @@
   order: 2;
 }
 
-.item {
+.item,
+.item2 {
   width: 100%;
-  text-align: center;
+  text-align: left;
   order: 3;
   display: none;
 }
 
-.item.active {
+.item.active,
+.item2.active {
   display: block;
 }
 
@@ -328,31 +384,38 @@
 
 .banner {
   justify-content: center;
-  align-items: center;
-  display: flex;
+  text-align: center;
 }
 
-.center {
+.titleCenter {
   margin: 1rem;
   text-align: center;
   justify-content: center;
-  align-items: center;
+  display: inline-block
+}
+
+
+.searchCenter {
+  margin: 1rem;
+  text-align: center;
+  justify-content: center;
 }
 
 .titleHeader,
 .subtitle {
   display: inline-block !important;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 .titleHeader {
-  font-size: 2rem;
+  font-family: 'Butler', serif, 'Times New Roman', Times;
+  font-size: 2.5rem;
   border-right: #000 solid 2px;
   padding-right: 1rem;
 }
 
 .subtitle {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-left: 1rem;
 }
 
@@ -362,9 +425,78 @@
 }
 
 .buttonStart {
-  background-color: #000;
-  opacity: 70%;
+  background-color: #00745e;
+  border: none;
+  width: 150px;
+  height: 40px;
+  opacity: 75%;
   color: #fff;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 0.5rem;
+  font-size: 1rem;
+  font-family: 'Quicksand';
+  font-weight: bold;
+}
+
+
+.searchPlaceholder {
+  width: 500px;
+  border-radius: 20px;
+  height: 35px;
+}
+
+.buttonSearch {
+  margin-left: 1rem;
+  background: transparent;
+  border: none
+}
+
+
+.readMore {
+  border-radius: 20px;
+  background: #00745e;
+  color: #fff;
+  border-style: none;
+  font-family: 'Quicksand';
+  width: 130px;
+  height: 40px;
+}
+
+/*Grilla*/
+
+
+.gridIndex {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 400px);
+  /* 3 columns */
+  grid-template-rows: repeat(2, 500px);
+  /* 3 rows  */
+  grid-gap: 50px 30px;
+  margin: 2rem;
+  /* 50 pixels of space added between rows and 30 pixels added between columns  */
+}
+
+.gridItem {
+  border: 1px solid #000;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+}
+
+.gridItem img {
+  height: 100%;
+  width: 360px;
+  border-radius: 20px;
+}
+
+
+.textGrid {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #0070f3;
 }

@@ -3,6 +3,9 @@ import {library} from '@fortawesome/fontawesome-svg-core';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {fas} from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import Image from 'next/image';
+import biblioteca from '../public/img/biblioteca.png';
+import UNMSM from '../public/img/unmsm.png';
 
 library.add(fas,fab);
 
@@ -13,17 +16,18 @@ const Navbar=()=>{
             <div className={styles.headerGrid}>
                 <div  id="container-img-center" className={styles.containerImg}>    
                     <a id="logo-unmsm-center" className={styles.mr0 +styles.floatLeft} title="UNMSM" href="https://www.unmsm.edu.pe/" target="_blank">
-                        <img className={styles.pr4} src="https://posgrado.unmsm.edu.pe/unmsm/resources/image/logo.png" alt="UNMSM"/>
+                        <Image className={styles.imageLogo} src={UNMSM} alt="UNMSM" layout="raw"/>
                     </a>
                     <a  id="logo-biblioteca" href="../" className={styles.h100+ styles.ml0+styles.floatLeft} title="SISBIB">
-                            <img  className={styles.pr4} src="https://form-sisbib.herokuapp.com/assets/principal/images/header/bibcentral_blanco-min.png" alt="SISBIB" />
+                            <Image  className={styles.imageLogo} src={biblioteca} alt="SISBIB" layout="raw"/>
                     </a>
-                    <div className={styles.dFlex + styles.positionRelative+styles.alignItemsCenter+styles.justifyContentBetween+ styles.h100}>
-                        <a> <FontAwesomeIcon icon="fa-solid fa-envelope" width={15}
-                         /> bibcent@unmsm.edu.pe</a>
-                        <a> <FontAwesomeIcon icon="fa-brands fa-facebook" width={15}/></a>
-                        <a><FontAwesomeIcon icon="fa-brands fa-instagram" width={15}/></a>
-                        <a><FontAwesomeIcon icon="fa-brands fa-linkedin" width={15}/></a>
+                    <div className={styles.socialNetworks}>
+                        <div className={styles.alignSocialNetworks}>
+                            <a> <FontAwesomeIcon icon="fa-solid fa-envelope" className={styles.iconNetworksEnvelope} /> <span className={styles.correo}>bibcent@unmsm.edu.pe</span></a>
+                            <a><FontAwesomeIcon icon="fa-brands fa-facebook-square" className={styles.iconNetworks}/></a>
+                            <a><FontAwesomeIcon icon="fa-brands fa-instagram-square" className={styles.iconNetworks}/></a>
+                            <a><FontAwesomeIcon icon="fa-brands fa-twitter-square" className={styles.iconNetworks}/></a>
+                        </div>
                     </div>
                 </div>
             </div> 
@@ -34,3 +38,4 @@ const Navbar=()=>{
 }
 
 export default Navbar;
+
