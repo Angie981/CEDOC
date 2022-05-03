@@ -1,0 +1,120 @@
+.nav {
+    padding: 5px 0px;
+    height: 700px;
+}
+
+.bannerHeader {
+    justify-content: center;
+    text-align: center;
+}
+
+.titleCenter {
+    margin: 1rem;
+    text-align: center;
+    justify-content: center;
+    display: inline-block
+}
+
+.titleHeader {
+    font-family: 'Butler', serif, 'Times New Roman', Times;
+    font-size: 2.5rem;
+    border-right: #000 solid 2px;
+}
+
+.titleHeader,
+.subtitle {
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+
+/* Mobile menu */
+
+.toggle {
+    cursor: pointer;
+    width: 3.7rem;
+    height: 3.2rem;
+    border-radius: 20px;
+    background: #000;
+    opacity: 75%;
+    color: #fff;
+    float: right;
+    border-style: none;
+    margin: 1rem 4.5rem 1rem 0;
+}
+
+.menuBox {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.menu {
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: -100%;
+    top: 5rem;
+}
+
+.menu ul {
+    list-style-type: none !important;
+}
+
+.menu li {
+    height: 50px;
+    font-size: 16px;
+    padding: 15px;
+    white-space: nowrap;
+}
+
+.menu li {
+    background: #000;
+    opacity: 75%;
+    color: #fff;
+}
+
+.menu.active {
+    margin-right: 0;
+}
+
+.item,
+.item2 {
+    width: 100%;
+    text-align: left;
+}
+
+
+.submenu {
+    width: min-content;
+    margin-top: -1rem;
+    width: 325px;
+    margin-left: -325px;
+    padding-right: 15px;
+    display: none;
+}
+
+.start {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.buttonStart {
+    background-color: #00745e;
+    border: none;
+    width: 150px;
+    height: 40px;
+    opacity: 75%;
+    color: #fff;
+    border-radius: 20px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Quicksand';
+    font-weight: bold;
+}

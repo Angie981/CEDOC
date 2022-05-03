@@ -1,0 +1,63 @@
+.navElements {
+    height: 12vmin;
+    background-color: #fff;
+}
+
+.navElementsSize {
+    height: 100%
+}
+
+.headerGrid {
+    position: relative;
+    height: 100%;
+    width: auto;
+    display: grid;
+    grid-template-columns: max-content;
+}
+
+.containerImg {
+    position: relative;
+    height: 12vmin;
+    width: 100vw;
+    display: flex;
+}
+
+.imageLogo {
+    padding-right: 1.5rem !important;
+    height: 100%;
+    width: auto;
+    padding: 1.9vmin
+}
+
+.socialNetworks {
+    width: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.alignSocialNetworks {
+    padding: 1.9vmin;
+    margin-right: 1.9vmin;
+    width: 100%;
+    text-align: right;
+}
+
+.iconNetworksEnvelope,
+.iconNetworks {
+    margin-left: 7px;
+    margin-bottom: -5px;
+    height: 1.4rem;
+}
+
+
+.correo {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width:1200px) {
+    .navElementsSize {
+        width: 100%
+    }
+}

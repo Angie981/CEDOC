@@ -31,3 +31,20 @@ li {
 .toggle a {
   font-size: 20px;
 }
+
+
+#firstOptionMenu {
+  border-radius: 20px 20px 0px 0px;
+}
+
+#lastOptionMenu {
+  border-radius: 0px 0px 20px 20px;
+}
+
+#firstOptionSubMenu {
+  border-radius: 20px 0px 0px 0px;
+}
+
+#lastOptionSubMenu {
+  border-radius: 0px 0px 0px 20px;
+}
