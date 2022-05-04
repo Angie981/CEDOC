@@ -1,39 +1,38 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react'
 import s from '../banner/banner.module.css'
-import background from'../../public/js/bannerBackground';
+import {background,namePage} from'../../public/js/bannerBackground';
 import {openServices,openRecursos} from '../../public/js/menu';
-import {library} from '@fortawesome/fontawesome-svg-core';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {fas} from '@fortawesome/free-solid-svg-icons';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-library.add(fas,fab);
+import { FaBars, FaTimes, FaPlay } from "react-icons/fa";
 
 background();
 
-const Banner=()=>{
-    const [isOpen,setIsOpen] = useState(false);
-    const openMenu= ()=> setIsOpen(!isOpen);
 
+
+const Banner=()=>{
+
+    const [collapsed, setCollapsed] = useState(false);
+    const toggleCollapsed = () => setCollapsed(!collapsed);
+    const [page,setPage]=useState('')
+    useEffect(()=>setPage(namePage()),[])
     return (    
-        <nav id="banner" className={s.nav}>          
+        <nav id="banner" className={s.nav}>  
             <div className={s.bannerHeader}>
                  <div className={s.titleCenter}>   
                     <div id="title" className={s.titleHeader}>
-                        CDMS
+                    {page}
                     </div>
                     <div id="subtitle"
                      className={s.subtitle}>
                         Centro de Documentación <br></br>
                         sobre Movimientos Sociales 
                     </div>  
-                </div>
-                <button className={s.toggle} onClick={openMenu}> 
-                    <FontAwesomeIcon icon="fa-solid fa-bars" width={20} /> 
+                </div>       
+                <button className={s.toggle} onClick={toggleCollapsed}> 
+                    {collapsed ===false ? <FaBars className={s.icon}/> : <FaTimes className={s.icon}/>}
                 </button>
             </div>
-
             <div className={s.menuBox}>
-                <ul className={isOpen=== false ? s.menu : s.menu + ' '+s.active}>
+                <ul className={collapsed=== false ? s.menu : s.menu + ' '+s.active}>
                     <li id="firstOptionMenu" className={s.item}>
                         <a href="/"> ▶ Inicio</a>
                         </li>
@@ -61,11 +60,11 @@ const Banner=()=>{
             </div>
             <div id="start" className={s.start}>
                 <button className={s.buttonStart} >EMPECEMOS</button>
-            </div>                  
+            </div> 
         </nav>
-        
-            );
+        );
         }
         
     export default Banner;
+
 

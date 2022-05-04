@@ -43,11 +43,24 @@
     text-align: right;
 }
 
+.iconNetworksEnvelope {
+    font-size: 1.7rem;
+    padding: 0;
+}
+
 .iconNetworksEnvelope,
 .iconNetworks {
-    margin-left: 7px;
+    margin-left: 5px;
     margin-bottom: -5px;
-    height: 1.4rem;
+}
+
+
+.iconNetworks {
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    padding: 0.3rem;
+    font-size: 2rem;
 }
 
 

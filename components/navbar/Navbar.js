@@ -1,13 +1,10 @@
 import React from 'react';
 import s from '../navbar/navbar.module.css'
-import {library} from '@fortawesome/fontawesome-svg-core';
 import Image from 'next/image';
 import biblioteca from '../../public/img/biblioteca.png';
 import UNMSM from '../../public/img/unmsm.png';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {fas} from '@fortawesome/free-solid-svg-icons';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-library.add(fas,fab);
+import {RiFacebookFill, RiInstagramLine, RiTwitterFill } from "react-icons/ri";
+import { FaEnvelope } from "react-icons/fa";
 
 const Navbar=()=>{
     return (
@@ -23,10 +20,10 @@ const Navbar=()=>{
                     </a>
                     <div className={s.socialNetworks}>
                         <div className={s.alignSocialNetworks}>
-                            <a> <FontAwesomeIcon icon="fa-solid fa-envelope" className={s.iconNetworksEnvelope} /> <span className={s.correo}>bibcent@unmsm.edu.pe</span></a>
-                            <a><FontAwesomeIcon icon="fa-brands fa-facebook-square" className={s.iconNetworks}/></a>
-                            <a><FontAwesomeIcon icon="fa-brands fa-instagram-square" className={s.iconNetworks}/></a>
-                            <a><FontAwesomeIcon icon="fa-brands fa-twitter-square" className={s.iconNetworks}/></a>
+                            <a> <FaEnvelope  className={s.iconNetworksEnvelope}/> <span className={s.correo}>bibcent@unmsm.edu.pe</span></a>
+                            <a> <RiFacebookFill  className={s.iconNetworks}/></a>
+                            <a> <RiInstagramLine className={s.iconNetworks}/></a>
+                            <a> <RiTwitterFill className={s.iconNetworks}/>  </a>
                         </div>
                     </div>
                 </div>

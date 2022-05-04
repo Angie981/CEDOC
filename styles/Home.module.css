@@ -3,21 +3,24 @@
 }
 
 .searchCenter {
+  display: flex;
+  align-items: center;
   margin: 1rem;
   text-align: center;
   justify-content: center;
 }
 
 .searchPlaceholder {
-  width: 500px;
+  width: 1000px;
   border-radius: 20px;
-  height: 35px;
+  height: 45px;
 }
 
 .buttonSearch {
   margin-left: 1rem;
   background: transparent;
-  border: none
+  font-size: 45px;
+  border: none;
 }
 
 .resumenGrid {

@@ -24,7 +24,12 @@
     -webkit-border-radius: 400px 400px 0 0;
 }
 
+.mainFooter a {
+    text-decoration: underline;
+}
+
 .grid {
+    margin: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,12 +56,19 @@
     border-color: #0070f3;
 }
 
+.icon {
+    font-size: 2rem;
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    margin-left: 10px;
+}
+
 .secondaryFooter {
     height: 25px;
     background: #fff;
     color: #000;
 }
-
 
 .secondaryFooter p {
     margin: 0;

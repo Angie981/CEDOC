@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css';
 import Navbar from '../components/navbar/Navbar.js';
 import Footer from '../components/footer/Footer.js';
 import Banner from '../components/banner/Banner.js';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {FaSearch} from 'react-icons/fa';
 
 export default function Home() {
   return (
@@ -24,7 +24,7 @@ export default function Home() {
       </Banner>
       <div className={styles.searchCenter}>
         <input className={styles.searchPlaceholder} type="search" id="site-search"/> 
-        <button className={styles.buttonSearch}><FontAwesomeIcon icon="fa-solid fa-magnifying-glass" width={30}/></button>
+        <button className={styles.buttonSearch}><FaSearch/></button>
       </div>
       <div className={styles.resumenGrid}>
         <div className={styles.resumenGridItem}>+3400 <br/> articulos</div>

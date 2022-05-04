@@ -13,6 +13,11 @@ function background(){
 
         }
 
+        if(sPage===""){
+            page.style.background = '#b1dfbf';
+
+        } 
+
         if(sPage!==""){
             subtitle.style.display='none'; 
             title.style.border='none';
@@ -29,5 +34,22 @@ function background(){
 };
 
 
+function namePage (){
+    if (typeof window !== "undefined") {
+        var namePage="";
+        var sPath = window.location.pathname;
+        var sPage = sPath.substring(sPath.lastIndexOf('/') + 1); 
+        if(sPage===""){
+            namePage="CDMS";
+        }
+        if(sPage==="nosotros"){
+            namePage="Nosotros";
+        }
+        if(sPage==="acceso_wifi"){
+            namePage="Acceso a Wifi";
+        }
+    }
+    return namePage;
+};
 
-export default background;
+export {namePage,background};
